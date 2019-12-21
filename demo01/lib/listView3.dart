@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ListPage extends StatelessWidget {
+class ListViewDemo3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //定义列表widget的list
@@ -34,7 +34,7 @@ class ListPage extends StatelessWidget {
     //返回整个页面
     return Scaffold(
       appBar: AppBar(
-        title: Text("List Page"),
+        title: Text("动态列表"),
       ),
       body: Center(
         child: ListView(

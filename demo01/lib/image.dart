@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/image.dart';
 
 // Scaffold通常被用作MaterialApp的子Widget，
 // 它会填充可用空间，占据整个窗口或设备屏幕。
@@ -9,12 +8,29 @@ class ImageDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("image demo"),
+        title: Text("ImageWidget"),
       ),
-      // cjh todo 如何展示多张图片
-      body:Image(
-        image: NetworkImage("https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png"),
-        // image: Image.asset("images/header.jpg",width:200.0)
+      body:Center(
+        child:Container(
+          width:400,
+          height: 300,
+          color:Colors.lightBlue,
+          child: new Image.network(
+            "https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png",
+            scale:2.0,  // 缩小2倍
+            repeat: ImageRepeat.repeat,  //  repeatX 横向重复
+            // fit:BoxFit.contain,   // 图片填充方式  container, cover, fitWidth, fitHeight
+            // color:Colors.green,  // 颜色
+            // colorBlendMode: BlendMode.modulate,  // 颜色混合模式
+          ),
+          // 等价于：
+          // child:Image(
+          //   image: NetworkImage(
+          //     "https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png",
+          //     scale: 2.0
+          //   ),
+          // )
+        )
       )
     );
   }

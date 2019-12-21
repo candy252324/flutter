@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'list.dart';
 import 'button.dart';
 import 'detailPage.dart';
 import 'text.dart';
 import 'container.dart';
 import 'image.dart';
+import 'listView1.dart';
+import 'listView2.dart';
+import 'listView3.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
         "ButtonPage":(context)=> ButtonDemo(),
         "ContainerPage":(context)=> ContainerDemo(),
         "ImagePage":(context)=> ImageDemo(),
-        "ListPage":(context)=> ListPage(),
+        "listViewPage1":(context)=> ListViewDemo1(), 
+        "listViewPage2":(context)=> ListViewDemo2(), 
+        "listViewPage3":(context)=> ListViewDemo3(),
         "DetailPage":(context)=> DetailPage(), //增加详情页的路由配置
       },
       home: MyHomePage(),
@@ -72,12 +76,26 @@ class MyHomePageState extends State<MyHomePage>{
                 //根据命名路由做跳转
                 Navigator.pushNamed(context, "ImagePage");
               },
-            ),
+            ),         
             RaisedButton(
-              child: Text("Clikc to ListPage" ),
+              child: Text("纵向列表" ),
               onPressed: () {
                 //根据命名路由做跳转
-                Navigator.pushNamed(context, "ListPage");
+                Navigator.pushNamed(context, "listViewPage1");
+              },
+            ),
+             RaisedButton(
+              child: Text("横向列表" ),
+              onPressed: () {
+                //根据命名路由做跳转
+                Navigator.pushNamed(context, "listViewPage2");
+              },
+            ),
+            RaisedButton(
+              child: Text("动态列表" ),
+              onPressed: () {
+                //根据命名路由做跳转
+                Navigator.pushNamed(context, "listViewPage3");
               },
             ),
           ]

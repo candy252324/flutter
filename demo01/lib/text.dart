@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 // 它会填充可用空间，占据整个窗口或设备屏幕。
 // Scaffold提供了大多数应用程序都应该具备的功能，例如顶部的appBar，底部的bottomNavigationBar，隐藏的侧边栏drawer等。
 
+// cjh todo StatelessWidget
 class TextDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TextWidget"),
+        title: Text("text"),
       ),
       body:Center(
          child: Text(
