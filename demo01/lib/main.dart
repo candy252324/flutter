@@ -7,6 +7,7 @@ import 'image.dart';
 import 'listView1.dart';
 import 'listView2.dart';
 import 'listView3.dart';
+import 'grideView.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         "listViewPage2":(context)=> ListViewDemo2(), 
         "listViewPage3":(context)=> ListViewDemo3(),
         "DetailPage":(context)=> DetailPage(), //增加详情页的路由配置
+        "grideViewPage":(context)=> GrideViewDemo(), //增加详情页的路由配置
       },
       home: MyHomePage(),
     );
@@ -44,7 +46,7 @@ class MyHomePageState extends State<MyHomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("我是Title"),
+        title: Text("入口页面"),
       ),
       body: Center(
         child:Column(
@@ -59,43 +61,43 @@ class MyHomePageState extends State<MyHomePage>{
             RaisedButton(
               child: Text("Click to Button" ),
               onPressed: () {
-                //根据命名路由做跳转
                 Navigator.pushNamed(context, "ButtonPage");
               },
             ),
             RaisedButton(
               child: Text("Click to Container" ),
               onPressed: () {
-                //根据命名路由做跳转
                 Navigator.pushNamed(context, "ContainerPage");
               },
             ),
              RaisedButton(
               child: Text("Click to Image" ),
               onPressed: () {
-                //根据命名路由做跳转
                 Navigator.pushNamed(context, "ImagePage");
               },
             ),         
             RaisedButton(
               child: Text("纵向列表" ),
               onPressed: () {
-                //根据命名路由做跳转
                 Navigator.pushNamed(context, "listViewPage1");
               },
             ),
              RaisedButton(
               child: Text("横向列表" ),
               onPressed: () {
-                //根据命名路由做跳转
                 Navigator.pushNamed(context, "listViewPage2");
               },
             ),
             RaisedButton(
               child: Text("动态列表" ),
               onPressed: () {
-                //根据命名路由做跳转
                 Navigator.pushNamed(context, "listViewPage3");
+              },
+            ),
+             RaisedButton(
+              child: Text("网格布局" ),
+              onPressed: () {
+                Navigator.pushNamed(context, "grideViewPage");
               },
             ),
           ]
