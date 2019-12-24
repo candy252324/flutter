@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
-import 'detailPage.dart';
-import 'text.dart';
-import 'container.dart';
-import 'image.dart';
-import 'listView1.dart';
-import 'listView2.dart';
-import 'listView3.dart';
-import 'grideView.dart';
+// import 'navigator/navigator.dart';
+
+import 'pages/button.dart';
+import 'pages/listDetail.dart';
+import 'pages/text.dart';
+import 'pages/container.dart';
+import 'pages/image.dart';
+import 'pages/listView1.dart';
+import 'pages/listView2.dart';
+import 'pages/listView3.dart';
+import 'pages/grideView.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         "listViewPage1":(context)=> ListViewDemo1(), 
         "listViewPage2":(context)=> ListViewDemo2(), 
         "listViewPage3":(context)=> ListViewDemo3(),
-        "DetailPage":(context)=> DetailPage(), //增加详情页的路由配置
+        "DetailPage":(context)=> ListDetailDemo(), //增加详情页的路由配置
         "grideViewPage":(context)=> GrideViewDemo(), //增加详情页的路由配置
       },
       home: MyHomePage(),
@@ -46,7 +48,7 @@ class MyHomePageState extends State<MyHomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("入口页面"),
+        title: Text("首页"),
       ),
       body: Center(
         child:Column(

@@ -45,6 +45,12 @@ flutter:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
+  # 将images目录下的所有【直接子文件】都注册进来，（书写时注意对齐方式）
+  # 但是images目录下的子文件夹中的资源是不会被注册进来的，需要再次注册
+  # 如：- images/child
+  assets:
+    - images/
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

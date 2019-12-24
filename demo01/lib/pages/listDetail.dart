@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class DetailPage extends StatelessWidget {
+class ListDetailDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      //获取路由传参
