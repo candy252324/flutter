@@ -23,11 +23,15 @@ class _HomePageState extends State<HomePage> {
         Container(
           width:100,
           height: 100,
-          color:Colors.grey,
+          padding:const EdgeInsets.all(10),  // 内边距
+          decoration: new BoxDecoration(
+            color: Colors.green[100],
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+          ),
           // 因为Container本身没有点击事件，这里使用GestureDetector捕获点击事件
           child: GestureDetector(
-            child: Text(
-              item["text"],
+            child: Center(
+              child:Text(item["text"]),
             ),
             onTap: (){ 
               Navigator.pushNamed(context, item["route"]);
