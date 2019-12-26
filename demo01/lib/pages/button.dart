@@ -1,39 +1,59 @@
 import 'package:flutter/material.dart';
 
-// RaisedButton: 凸起的按钮
-// FlatButton：扁平化按钮
-// OutlineButton：带边框按钮
-// IconButton：带图标按钮
-// Scaffold通常被用作MaterialApp的子Widget，它会填充可用空间，占据整个窗口或设备屏幕。Scaffold提供了大多数应用程序都应该具备的功能，例如顶部的appBar，底部的bottomNavigationBar，隐藏的侧边栏drawer等。
-
 class ButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text("Button Page"),
       ),
+      // FloatingActionButton 在 Scaffold 里使用的时候，它是一个浮动状态的按钮，
+      // 在其他地方使用，就不会浮动
+      floatingActionButton :FloatingActionButton(
+        child: new Icon(Icons.add_a_photo),
+        elevation: 3.0,  // 未点击时阴影值
+        highlightElevation: 2.0,  //点击下阴影值
+        backgroundColor: Colors.red,  
+        onPressed: () {},
+      ),  
       body: Column(
         children: <Widget>[
-             RaisedButton(
-                  child: Text("我是 RaiseButton" ),
-                  onPressed: () {},
-              ),
-               FlatButton(
-                  child: Text("我是 FlatButton" ),
-                  color: Colors.blue,
-                  onPressed: () {},
-              ),
-              OutlineButton(
-                  child: Text("我是 OutlineButton" ),
-                  textColor: Colors.blue,
-                  onPressed: () {},
-              ),
-              IconButton(
-                  icon: Icon(Icons.add),
-                  onPressed: () {},
-              )  
+          new MaterialButton(
+            child: new Text('MaterialButton'),
+            color: Colors.blue,
+            textColor: Colors.white,
+            onPressed: () {},
+          ),
+          // 凸起的按钮
+          RaisedButton(
+            child: Text("RaiseButton" ),
+            onPressed: () {},  // onPressed 点击时候触发，如果不传默认是不可用状态。
+            textTheme :ButtonTextTheme.normal
+          ),
+          // 扁平化按钮
+          FlatButton(
+            child: Text("FlatButton" ),
+            color: Colors.blue,
+            onPressed: () {},
+          ),
+          // 带边框按钮
+          OutlineButton(
+            child: Text("OutlineButton" ),
+            textColor: Colors.blue,
+            onPressed: () {},
+          ),
+          // 带图标按钮
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {},
+          ),
+          // FloatingActionButton(
+          //   onPressed: () {},
+          //   child: new Icon(Icons.add_a_photo),
+          //   elevation: 3.0,  // 未点击时阴影值
+          //   highlightElevation: 2.0,  //点击下阴影值
+          //   backgroundColor: Colors.red,        // 红色
+          // ),  
         ]
       )
     );

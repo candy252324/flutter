@@ -13,7 +13,6 @@ class TextDemo extends StatelessWidget {
       ),
       body:Center(
          child: Text(
-             // 文本内容写在最前面 
             'flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件',  
             textAlign:TextAlign.right, // 文本对齐
             maxLines: 1,// 文本显示的最大行数

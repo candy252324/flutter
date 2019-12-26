@@ -1,3 +1,4 @@
+// 使用Flutter必须要导入flutter/material.dart包，然后在main()函数中调用runApp函数
 import 'package:flutter/material.dart';
 import 'package:demo01/navigator/tab_navigator.dart';
 
@@ -9,6 +10,7 @@ import 'pages/image.dart';
 import 'pages/listView1.dart';
 import 'pages/listView2.dart';
 import 'pages/listView3.dart';
+import 'pages/passValue.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,6 +33,7 @@ class MyApp extends StatelessWidget {
         "ListViewPage2":(context)=> ListViewDemo2(), 
         "ListViewPage3":(context)=> ListViewDemo3(),
         "DetailPage":(context)=> ListDetailDemo(), //增加详情页的路由配置
+        "PassValuePage":(context)=> PassValue(), //增加详情页的路由配置
       },
       home: TabNavigator(),
     );
