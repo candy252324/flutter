@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
         "ButtonPage":(context)=> ButtonDemo(),
         "ContainerPage":(context)=> ContainerDemo(),
         "ImagePage":(context)=> ImageDemo(),
-        "listViewPage1":(context)=> ListViewDemo1(), 
-        "listViewPage2":(context)=> ListViewDemo2(), 
-        "listViewPage3":(context)=> ListViewDemo3(),
+        "ListViewPage1":(context)=> ListViewDemo1(), 
+        "ListViewPage2":(context)=> ListViewDemo2(), 
+        "ListViewPage3":(context)=> ListViewDemo3(),
         "DetailPage":(context)=> ListDetailDemo(), //增加详情页的路由配置
       },
       home: TabNavigator(),

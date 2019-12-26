@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 // 它会填充可用空间，占据整个窗口或设备屏幕。
 // Scaffold提供了大多数应用程序都应该具备的功能，例如顶部的appBar，底部的bottomNavigationBar，隐藏的侧边栏drawer等。
 
-// cjh todo StatelessWidget
 class TextDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class TextDemo extends StatelessWidget {
               fontSize:20,
               fontWeight: FontWeight.bold,
               // color:Color.fromARGB(255, 0, 255, 0), //等价于 color:Color(0xff0000ff), 0xff = 15*16^1 + 15*16^0 = 255
-              color:Colors.red[500],  // 100 的整数倍 cjh todo
+              color:Colors.red[300],  // 100 的整数倍
               decoration:TextDecoration.underline, // 下划线
               decorationStyle: TextDecorationStyle.solid,  
             )

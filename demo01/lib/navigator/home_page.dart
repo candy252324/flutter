@@ -14,9 +14,13 @@ class _HomePageState extends State<HomePage> {
       { "text":"Button", "route":"ButtonPage" },
       { "text":"Container", "route":"ContainerPage" },
       { "text":"Image", "route":"ImagePage" },
-      { "text":"纵向列表", "route":"listViewPage1" },
-      { "text":"横向列表", "route":"listViewPage2" },
-      { "text":"动态列表", "route":"listViewPage3" },
+      { "text":"纵向列表", "route":"ListViewPage1" },
+      { "text":"横向列表", "route":"ListViewPage2" },
+      { "text":"动态列表", "route":"ListViewPage3" },
+      { "text":"form表单?", "route":"" },
+      { "text":"弹窗?", "route":"" },
+      { "text":"组件传值?", "route":"" },
+      { "text":"http?", "route":"" },
     ];
     for (var item in routeData) {
       list.add( 
@@ -25,7 +29,7 @@ class _HomePageState extends State<HomePage> {
           height: 100,
           padding:const EdgeInsets.all(10),  // 内边距
           decoration: new BoxDecoration(
-            color: Colors.green[100],
+            color: item['route'].isNotEmpty? Colors.green[100]:Colors.grey,
             borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
           // 因为Container本身没有点击事件，这里使用GestureDetector捕获点击事件
@@ -34,7 +38,9 @@ class _HomePageState extends State<HomePage> {
               child:Text(item["text"]),
             ),
             onTap: (){ 
-              Navigator.pushNamed(context, item["route"]);
+              if(item['route'].isNotEmpty){
+                Navigator.pushNamed(context, item["route"]);
+              }
             },
           ),
         ),
