@@ -11,6 +11,8 @@ import 'pages/listView1.dart';
 import 'pages/listView2.dart';
 import 'pages/listView3.dart';
 import 'pages/passValue.dart';
+import 'pages/textField.dart';
+import 'pages/http.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,17 +25,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //路由表定义
-      routes:{
-        "TextPage":(context)=> TextDemo(),
-        "ButtonPage":(context)=> ButtonDemo(),
-        "ButtonPage":(context)=> ButtonDemo(),
-        "ContainerPage":(context)=> ContainerDemo(),
-        "ImagePage":(context)=> ImageDemo(),
-        "ListViewPage1":(context)=> ListViewDemo1(), 
-        "ListViewPage2":(context)=> ListViewDemo2(), 
-        "ListViewPage3":(context)=> ListViewDemo3(),
-        "DetailPage":(context)=> ListDetailDemo(), //增加详情页的路由配置
-        "PassValuePage":(context)=> PassValue(), //增加详情页的路由配置
+      routes: {
+        "TextPage": (context) => TextDemo(),
+        "ButtonPage": (context) => ButtonDemo(),
+        "ButtonPage": (context) => ButtonDemo(),
+        "ContainerPage": (context) => ContainerDemo(),
+        "ImagePage": (context) => ImageDemo(),
+        "ListViewPage1": (context) => ListViewDemo1(),
+        "ListViewPage2": (context) => ListViewDemo2(),
+        "ListViewPage3": (context) => ListViewDemo3(),
+        "DetailPage": (context) => ListDetailDemo(), //增加详情页的路由配置
+        "PassValuePage": (context) => PassValue(),
+        "TextFieldPage": (context) => TextFieldDemo(),
+        "HttpPage": (context) => HttpPageDemo(),
       },
       home: TabNavigator(),
     );
