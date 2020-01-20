@@ -10,6 +10,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     List<Widget> list = <Widget>[];
     var routeData = [
+      {"text": "计数器", "route": "CaculatePage"},
       {"text": "text", "route": "TextPage"},
       {"text": "Button", "route": "ButtonPage"},
       {"text": "Container", "route": "ContainerPage"},

@@ -8,26 +8,24 @@ class TextDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("text"),
-      ),
-      body:Center(
-         child: Text(
-            'flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件',  
-            textAlign:TextAlign.right, // 文本对齐
-            maxLines: 1,// 文本显示的最大行数
-            overflow: TextOverflow.ellipsis,  // 文本溢出效果,clip:裁剪，ellipsis：省略号，fade:渐变
-            style:TextStyle(
-              fontSize:20,
-              fontWeight: FontWeight.bold,
-              // color:Color.fromARGB(255, 0, 255, 0), //等价于 color:Color(0xff0000ff), 0xff = 15*16^1 + 15*16^0 = 255
-              color:Colors.red[300],  // 100 的整数倍
-              decoration:TextDecoration.underline, // 下划线
-              decorationStyle: TextDecorationStyle.solid,  
-            )
-          )
-      )
-    );
+        appBar: AppBar(
+          title: Text("text"),
+        ),
+        body: Center(
+            child: Text(
+                'flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件flutter一切皆组件',
+                textAlign: TextAlign.right, // 文本对齐
+                maxLines: 1, // 文本显示的最大行数
+                overflow: TextOverflow
+                    .ellipsis, // 文本溢出效果,clip:裁剪，ellipsis：省略号，fade:渐变
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  // color:Color.fromARGB(255, 0, 255, 0), //等价于 color:Color(0xff0000ff), 0xff = 15*16^1 + 15*16^0 = 255
+                  color: Colors.red[300], // 100 的整数倍
+                  decoration: TextDecoration.underline, // 下划线
+                  decorationStyle: TextDecorationStyle.solid,
+                ))));
   }
 }
 
